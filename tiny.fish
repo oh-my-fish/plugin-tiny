@@ -119,7 +119,7 @@ function tiny -d "get a git.io short URL"
       import plugins/pbcopy
     end
     # Print to stdout, copy to stderr pipe it into pbcopy.
-    echo "$url" | tee /dev/stderr ^| pbcopy ^/dev/null
+    echo "$url" | tee /dev/stderr 2>| pbcopy 2> /dev/null
 
     set -q open
       and open "$url"
